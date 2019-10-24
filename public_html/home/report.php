@@ -40,15 +40,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-4">
+          <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="index.php">Home
             </a>
           </li>
             <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.php">Feed</a>
+            <a class="nav-link text-uppercase text-expanded" href="feed.php">Feed</a>
           </li>
-             <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="store.php">Report <span class="sr-only">(current)</span>
+             <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="report.php">Report <span class="sr-only">(current)</span>
                  </a>
           </li>
             <li class="nav-item px-lg-4">
