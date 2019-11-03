@@ -1,4 +1,6 @@
 <?php
+//redirects to home page if not logged in
+require_once '../../src/redir_to_homepage.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,17 +42,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-4">
+          <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="index.php">Home
-              <span class="sr-only">(current)</span>
             </a>
           </li>
-            <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.php">Feed<span class="sr-only">(current)</span>
+            <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="feed.php">Feed
+                <span class="sr-only">(current)</span>
                 </a>
           </li>
              <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="store.php">Report</a>
+            <a class="nav-link text-uppercase text-expanded" href="report.php">Report</a>
           </li>
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="about.php">About</a>
@@ -66,9 +68,16 @@
         <div class="product-item-title d-flex">
           <div class="bg-faded p-5 d-flex ml-auto rounded">
             <h2 class="section-heading mb-0">
-              <span class="section-heading-upper">Blended to Perfection</span>
-              <span class="section-heading-lower">Coffees &amp; Teas</span>
+              <span class="section-heading-upper">Logged in as:</span>
+                <span class="section-heading-lower"><?php
+                    echo $_SESSION['user'];
+                    ?>
+                  </span>
             </h2>
+              <form action="../../src/logout.php"
+                    method="post">
+                  <input type="submit" name="logout" value="Log Out">
+              </form>
           </div>
         </div>
         <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/products-01.jpg" alt="">

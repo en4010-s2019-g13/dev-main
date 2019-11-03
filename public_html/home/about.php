@@ -46,10 +46,10 @@
             </a>
           </li>
             <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.php">Feed</a>
+            <a class="nav-link text-uppercase text-expanded" href="feed.php">Feed</a>
           </li>
              <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="store.php">Report</a>
+            <a class="nav-link text-uppercase text-expanded" href="report.php">Report</a>
           </li>
             <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="about.php">About <span class="sr-only">(current)</span>
