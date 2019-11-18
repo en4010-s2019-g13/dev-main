@@ -7,9 +7,18 @@ $server_root = dirname($_SERVER['PHP_SELF']);
 // Be sure to use $db->close(); at the end of each php file that includes this!
 
 $dbhost = 'localhost';  // Most likely will not need to be changed
-$dbname = 'cen4010fal19_g13';   // Needs to be changed to your designated table database name
-$dbuser = 'cen4010fal19_g13';   // Needs to be changed to reflect your LAMP server credentials
-$dbpass = '0C3UdeBq9m'; // Needs to be changed to reflect your LAMP server credentials
+$dbname = 'test';   // Needs to be changed to your designated table database name
+$dbuser = 'root';   // Needs to be changed to reflect your LAMP server credentials
+$dbpass = ''; // Needs to be changed to reflect your LAMP server credentials
+//Comment out for live server
+//$dbhost = 'localhost';  // Most likely will not need to be changed
+//$dbname = 'cen4010fal19_g13';   // Needs to be changed to your designated table database name
+//$dbuser = 'cen4010fal19_g13';   // Needs to be changed to reflect your LAMP server credentials
+//$dbpass = '0C3UdeBq9m'; // Needs to be changed to reflect your LAMP server credentials
+
+
+
+
 
 $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
@@ -21,3 +30,5 @@ if($connection->connect_errno > 0) {
 //}
 
 ?>
+<!--ALTER TABLE `users`-->
+<!--ADD COLUMN `level` int NOT NULL DEFAULT 0-->

@@ -1,9 +1,9 @@
 <?php
 
-function add_user($connection, $un, $pw)
+function add_user($connection, $un, $pw, $perms)
 {
-    $stmt = $connection->prepare('INSERT INTO users VALUES(?,?)');
-    $stmt->bind_param('ss', $un, $pw);
+    $stmt = $connection->prepare('INSERT INTO users VALUES(?,?,?)');
+    $stmt->bind_param('ssi', $un, $pw, $perms);
     $stmt->execute();
     $stmt->close();
 }

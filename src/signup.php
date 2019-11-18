@@ -17,12 +17,13 @@ if (isset($_POST['create_account_submit'])) {
         if ($result->num_rows == 0) {
             //insert to database
             $hash = password_hash($pass, PASSWORD_DEFAULT);
-            add_user($connection, $user, $hash);
+            add_user($connection, $user, $hash,2);
 
             //login
             session_start();
             $_SESSION['user'] = $user;
-            $_SESSION['pass'] = $pass;
+            //$_SESSION['pass'] = $pass;
+            $_SESSION['perms'] = 0;
             header("Location: ../public_html/index.php");
             //die("valid");
         } else {

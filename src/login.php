@@ -12,7 +12,7 @@ if(isset($_POST['login_submit']))
         $error = 'Not all fields were entered';
     else
     {//??
-        $result =$connection->query("SELECT username,password FROM users
+        $result =$connection->query("SELECT username,password,perms FROM users
         WHERE username='$user'");
 
 
@@ -24,6 +24,8 @@ if(isset($_POST['login_submit']))
                 //print_r($_POST);
                 session_start();
                 $_SESSION['user'] = $user;
+                $_SESSION['perms'] = $connection->query("SELECT username,password,perms FROM users
+                WHERE username='$user'")->fetch_assoc()['perms'];
                 //$_SESSION['pass'] = $pass;
                 header("Location: ../public_html/index.php");
                 //die("valid");

@@ -2,6 +2,10 @@
 //redirects to login required page if not logged in
 require_once '../src/redir_to_login.php';
 require_once '../src/db_connect.php';
+
+//$result = $connection->query("SELECT username,password,perms FROM users
+//WHERE username='acc3'");
+//echo $result->fetch_assoc()['perms'];
 ?>
 
 <!DOCTYPE html>
@@ -175,47 +179,95 @@ require_once '../src/db_connect.php';
             <?php
         }
         ?>
+        <?php
+        if(isset($_SESSION['perms']))
+        {
+            if($_SESSION['perms'] > 0){ ?>
+                <section class="page-section about-heading">
+                    <div class="container">
+                        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/involved.jpg" alt="">
+                        <div class="about-heading-content">
+                            <div class="row">
+                                <div class="col-xl-9 col-lg-10 mx-auto">
+                                    <div class="bg-faded rounded p-5">
+                                        <h2 class="section-heading mb-4">
+                                            <span class="section-heading-upper">Have an important event? Add it to our page</span>
+                                            <span class="section-heading-lower">Add your event:</span>
+                                        </h2>
 
-        <section class="page-section about-heading">
-            <div class="container">
-                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/involved.jpg" alt="">
-                <div class="about-heading-content">
-                    <div class="row">
-                        <div class="col-xl-9 col-lg-10 mx-auto">
-                            <div class="bg-faded rounded p-5">
-                                <h2 class="section-heading mb-4">
-                                    <span class="section-heading-upper">Have an important event? Add it to our page</span>
-                                    <span class="section-heading-lower">Add your event:</span>
-                                </h2>
-                                
-                                <form method="post" action="../src/feedupload.php" enctype="multipart/form-data" >  
-                                    <p>
-                                        Date of Event:<br>
-                                        <input type="text" name="date">
-                                    </p>
-                                    <p>
-                                        Location of Event:<br>
-                                        <input type="text" name="location">
-                                    </p>
-                                    <p>
-                                        <p>
-                                            Description (provide details):
-                                            <br>
-                                            <textarea name="explanation" rows="5" cols="40"></textarea>
-                                        </p>
-                                        Say it with an image:<br>
-                                        <input type="file" name="imageToUpload" size="40">
-                                    </p>
-                                    <div>
-                                        <input type="submit" name="submit" value="Spread the Word">
+                                        <form method="post" action="../src/feedupload.php" enctype="multipart/form-data" >
+                                            <p>
+                        Date of Event:<br>
+                                                <input type="text" name="date">
+                                            </p>
+                                            <p>
+                        Location of Event:<br>
+                                                <input type="text" name="location">
+                                            </p>
+                                            <p>
+                                                <p>
+                        Description (provide details):
+                                                    <br>
+                                                    <textarea name="explanation" rows="5" cols="40"></textarea>
+                                                </p>
+                        Say it with an image:<br>
+                                                <input type="file" name="imageToUpload" size="40">
+                                            </p>
+                                            <div>
+                                                <input type="submit" name="submit" value="Spread the Word">
+                                            </div>
+                                        </form>
                                     </div>
-                                </form>  
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
+        <?php
+            }
+        }
+//        else{print_r($_SESSION);}
+        ?>
+<!--        <section class="page-section about-heading">-->
+<!--            <div class="container">-->
+<!--                <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/involved.jpg" alt="">-->
+<!--                <div class="about-heading-content">-->
+<!--                    <div class="row">-->
+<!--                        <div class="col-xl-9 col-lg-10 mx-auto">-->
+<!--                            <div class="bg-faded rounded p-5">-->
+<!--                                <h2 class="section-heading mb-4">-->
+<!--                                    <span class="section-heading-upper">Have an important event? Add it to our page</span>-->
+<!--                                    <span class="section-heading-lower">Add your event:</span>-->
+<!--                                </h2>-->
+<!--                                -->
+<!--                                <form method="post" action="../src/feedupload.php" enctype="multipart/form-data" >  -->
+<!--                                    <p>-->
+<!--                                        Date of Event:<br>-->
+<!--                                        <input type="text" name="date">-->
+<!--                                    </p>-->
+<!--                                    <p>-->
+<!--                                        Location of Event:<br>-->
+<!--                                        <input type="text" name="location">-->
+<!--                                    </p>-->
+<!--                                    <p>-->
+<!--                                        <p>-->
+<!--                                            Description (provide details):-->
+<!--                                            <br>-->
+<!--                                            <textarea name="explanation" rows="5" cols="40"></textarea>-->
+<!--                                        </p>-->
+<!--                                        Say it with an image:<br>-->
+<!--                                        <input type="file" name="imageToUpload" size="40">-->
+<!--                                    </p>-->
+<!--                                    <div>-->
+<!--                                        <input type="submit" name="submit" value="Spread the Word">-->
+<!--                                    </div>-->
+<!--                                </form>  -->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
         <footer class="footer text-faded text-center py-5">
             <div class="container">
