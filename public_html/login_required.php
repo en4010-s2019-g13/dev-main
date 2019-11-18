@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +8,7 @@ session_start();
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Team 13 Project Site - Home</title>
+  <title>Team 13 Project Site - Login Required</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -198,62 +194,13 @@ button on extra small screens */
     </div>
   </nav>
     
-<?php if(isset($_SESSION['user'])) { ?>
-    <section class="page-section">
-    <div class="container">
-      <div class="product-item">
-        <div class="product-item-title d-flex">
-          <div class="bg-faded p-5 d-flex ml-auto rounded">
-            <h2 class="section-heading mb-0">
-              <span class="section-heading-upper">Logged in as:</span>
-                <span class="section-heading-lower"><?php
-                    echo $_SESSION['user'];
-                    ?>
-                </span>
-                <span>              
-                    <br>
-                    <a href="report.php">View Reports</a>
-                    <br>
-                    <a href="feed.php">View Feed Items</a>
-                </span>
-            </h2>
-              <form action="../src/logout.php"
-                    method="post">
-                  <input type="submit" name="logout" value="Log Out">
-              </form>
-          </div>
-        </div>
-        </div>
-    </div>
-  </section>
-<?php } ?>    
-    
-  <section class="page-section clearfix">
-    <div class="container">
-      <div class="intro">
-      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/fau2.jpg" alt="">
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">THE MOST UP TO DATE WEBSITE</span>
-            <span class="section-heading-lower">OWL EYES</span>
-          </h2>
-          <p class="mb-3">Welcome to Owl Eyes! This website aims to show you the latest updates on campus including club news, planned events, and student reports. 
-          </p>
-          <div class="intro-button mx-auto">
-            <a class="btn btn-primary btn-xl" href="#">Let's Start!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
     <section class="page-section cta">
     <div class="container">
       <div class="row">
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Join Us!</span></h2>
+                <span class="section-heading-upper">Sorry, you must have an account to access these features!  Please log in or create an account.</span></h2>
                <br>
                 <button onclick="document.
 	               getElementById('id01')

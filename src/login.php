@@ -25,7 +25,7 @@ if(isset($_POST['login_submit']))
                 session_start();
                 $_SESSION['user'] = $user;
                 //$_SESSION['pass'] = $pass;
-                header("Location: ../public_html/home/feed.php");
+                header("Location: ../public_html/index.php");
                 //die("valid");
             }
             else{

@@ -23,7 +23,7 @@ if (isset($_POST['create_account_submit'])) {
             session_start();
             $_SESSION['user'] = $user;
             $_SESSION['pass'] = $pass;
-            header("Location: index.php");
+            header("Location: ../public_html/index.php");
             //die("valid");
         } else {
             die("invalid");

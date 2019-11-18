@@ -3,12 +3,12 @@ require_once "../src/functions.php";
 if (isset($_POST['logout'])) {
     logOut();
     echo "logged out";
-    header("Location: ../public_html/home/index.php");
+    header("Location: ../public_html/index.php");
 }
 else{
     echo "no log";
     //redirect
-    header("Location: index.php");
+    header("Location: ../public_html/index.php");
 }
 
 //redirect
