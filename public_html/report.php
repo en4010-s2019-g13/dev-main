@@ -80,7 +80,7 @@ require_once '../src/db_connect.php';
                 <span>
                 <span>
                     <br>
-                    <a href="report.php">View Reports</a>
+                    <a href="reportinbox.php">View Reports</a>
                     <br>
                     <a href="feed.php">View Feed Items</a>
                 </span>
@@ -190,69 +190,6 @@ require_once '../src/db_connect.php';
       </div>
     </div>
   </section>
-    
-<!--  <section class="page-section">-->
-<!--    <div class="container">-->
-<!--      <div class="product-item">-->
-<!--        <div class="product-item-title d-flex">-->
-<!--          <div class="bg-faded p-5 d-flex mr-auto rounded">-->
-<!--            <h2 class="section-heading mb-0">-->
-<!--              <span class="section-heading-upper">Status: Urgent</span>-->
-<!--              <span class="section-heading-lower">Pipe Problems at IVAN</span>-->
-<!--            </h2>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/pipe.jpg" alt="">-->
-<!--        <div class="product-item-description d-flex ml-auto">-->
-<!--          <div class="bg-faded p-5 rounded">-->
-<!--            <p class="mb-0">The pipe system outside of the housing building, Innovation Village North, is borken and the water is coming onto the walkway. It is impossible to avoid and my book bag with my laptop and all my homework got drenched.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-<!---->
-<!--  <section class="page-section">-->
-<!--    <div class="container">-->
-<!--      <div class="product-item">-->
-<!--        <div class="product-item-title d-flex">-->
-<!--          <div class="bg-faded p-5 d-flex ml-auto rounded">-->
-<!--            <h2 class="section-heading mb-0">-->
-<!--              <span class="section-heading-upper">Status: Medium</span>-->
-<!--              <span class="section-heading-lower">EE Computer Freezing</span>-->
-<!--            </h2>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/error2.jpg" alt="">-->
-<!--        <div class="product-item-description d-flex mr-auto">-->
-<!--          <div class="bg-faded p-5 rounded">-->
-<!--            <p class="mb-0">The computers in the Cube at Engineering East (building 96) keep displaying the message attached in my image. I have tried to restart the PC multiple times with no luck. Please assist.</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
-<!--    -->
-<!--      <section class="page-section">-->
-<!--    <div class="container">-->
-<!--      <div class="product-item">-->
-<!--        <div class="product-item-title d-flex">-->
-<!--          <div class="bg-faded p-5 d-flex mr-auto rounded">-->
-<!--            <h2 class="section-heading mb-0">-->
-<!--              <span class="section-heading-upper">Status: Urgent</span>-->
-<!--              <span class="section-heading-lower">Cieling Tiles in Dorm Buildings</span>-->
-<!--            </h2>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/broken.jpg" alt="">-->
-<!--        <div class="product-item-description d-flex ml-auto">-->
-<!--          <div class="bg-faded p-5 rounded">-->
-<!--            <p class="mb-0">The cieling tile in Parliament Hall dorm building is broken/missing. I believe this is a saftey hazard for students on campus as well as visitors. Please send someone to fix it. Thanks!</p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </section>-->
 
 
   <footer class="footer text-faded text-center py-5">

@@ -212,7 +212,7 @@ button on extra small screens */
                 </span>
                 <span>              
                     <br>
-                    <a href="report.php">View Reports</a>
+                    <a href="reportinbox.php">View Reports</a>
                     <br>
                     <a href="feed.php">View Feed Items</a>
                 </span>

@@ -32,7 +32,7 @@
 
     $target_file = upload_image();
 
-    $stmt = $connection->prepare('INSERT INTO reports VALUES(?,?,?,?)');
+    $stmt = $connection->prepare('INSERT INTO reports(priority, location, explanation, imagelocation) VALUES(?,?,?,?)');
     $stmt->bind_param('ssss', $priority, $location, $explanation, $target_file);
     $stmt->execute();
     $stmt->close();

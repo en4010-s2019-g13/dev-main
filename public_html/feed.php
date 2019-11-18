@@ -74,7 +74,7 @@ require_once '../src/db_connect.php';
                                 <span class="section-heading-lower"><?php echo $_SESSION['user']; ?></span>
                                 <span>              
                                     <br>
-                                    <a href="report.php">View Reports</a>
+                                    <a href="reportinbox.php">View Reports</a>
                                     <br>
                                     <a href="feed.php">View Feed Items</a>
                                 </span>
